@@ -5,28 +5,6 @@ const plugin = require('tailwindcss/plugin');
 
 const shorthands = plugin(function ({addUtilities}) {
     addUtilities({
-        '.f-col': {
-            'display': 'flex',
-            'flex-direction': 'column',
-        },
-        '.f-row': {
-            'display': 'flex',
-            'flex-direction': 'row',
-        },
-        '.xy-center': {
-            'justify-content': 'center',
-            'align-items': 'center',
-        },
-        '.f-col-grow': {
-            'display': 'flex',
-            'flex-direction': 'column',
-            'flex-grow': 1,
-        },
-        '.f-grow': {
-            'display': 'flex',
-            'flex-direction': 'row',
-            'flex-grow': 1,
-        },
         '.global-centered': {
             position: 'fixed',
             left: '50%',
@@ -49,33 +27,30 @@ module.exports = {
     ],
     prefix: '',
     theme: {
-        container: {
-            center: true,
-            screens: {
-                '2xl': '1400px'
-            }
-        },
         extend: {
             colors: {
                 primary: {
                     DEFAULT: 'var(--color-primary)',
                     light: 'var(--color-primary-light)',
-                    dark: 'var(--color-aquatic-ultra-deep)',
+                    dark: 'var(--color-purple-light)',
                 },
                 secondary: {
                     DEFAULT: 'var(--color-secondary)',
                     light: 'var(--color-secondary-light)',
                     dark: 'var(--color-secondary-dark)',
-                    foreground: 'var(--color-secondary-foreground)',
                 },
                 background: {
                     light: 'var(--color-background-light)',
-                    dark: 'var(--color-blue-navy)',
+                    dark: 'var(--color-gray-7)',
+                },
+                surface: {
+                    light: 'var(--color-background-light)',
+                    dark: 'var(--color-grey-near-black)',
                 },
                 border: {
                     primary: {
                         light: 'var(--color-card-light)',
-                        dark: 'var(--color-aquatic-main)',
+                        dark: 'var(--color-grey-near-black-light)',
                         DEFAULT: 'var(--color-aquatic-main)',
                     },
                     secondary: {
@@ -98,42 +73,6 @@ module.exports = {
                         dark: 'var(--color-ocean-deep-shadow)',
                         DEFAULT: 'var(--color-ocean-deep-shadow)',
                     },
-                },
-                card: {
-                    primary: {
-                        light: 'var(--color-card-light)',
-                        dark: 'var(--color-ocean-depth)',
-                        DEFAULT: 'var(--color-ocean-depth)',
-                    },
-                    secondary: {
-                        light: 'var(--color-card-light)',
-                        dark: 'var(--color-ocean-depth)',
-                        DEFAULT: 'var(--color-ocean-depth)',
-                    },
-                    hover: {
-                        light: 'var(--color-card-light)',
-                        dark: 'var(--color-ocean-depth)',
-                        DEFAULT: 'var(--color-ocean-depth)',
-                    },
-                    muted: {
-                        light: 'var(--color-card-light)',
-                        dark: 'var(--color-ocean-depth)',
-                        DEFAULT: 'var(--color-ocean-depth)',
-                    },
-                    accent: {
-                        light: 'var(--color-ocean-deep-shadow)',
-                        dark: 'var(--color-ocean-deep-shadow)',
-                        DEFAULT: 'var(--color-ocean-deep-shadow)',
-                    },
-                },
-                island: {
-                    light: 'var(--color-island-light)',
-                    dark: 'var(--color-ocean-depth)',
-                },
-                icon: {
-                    DEFAULT: 'var(--color-icon-light)',
-                    light: 'var(--color-icon-light)',
-                    dark: 'var(--color-icon-dark)',
                 },
                 text: {
                     primary: {
@@ -260,6 +199,14 @@ module.exports = {
                     "0%": {backgroundPosition: "100%"},
                     "100%": {backgroundPosition: "-100%"},
                 },
+                shimmer: {
+                    from: {
+                        backgroundPosition: "0 0",
+                    },
+                    to: {
+                        backgroundPosition: "-200% 0",
+                    },
+                },
                 'star-movement-bottom': {
                     '0%': {transform: 'translate(0%, 0%)', opacity: '1'},
                     '100%': {transform: 'translate(-100%, 0%)', opacity: '0'},
@@ -270,6 +217,7 @@ module.exports = {
                 },
             },
             animation: {
+                'shimmer': "shimmer 2s linear infinite",
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
                 'caret-blink': 'caret-blink 1.25s ease-out infinite',

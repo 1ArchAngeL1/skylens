@@ -1,23 +1,27 @@
 import type {Metadata} from "next";
-import "./index.scss";
+import "./global.scss";
+import React from "react";
+import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
-    title: "skylence",
-    description: "skylence",
+    title: "skylens",
+    description: "skylens",
 };
 
-export default function RootLayout({children,}: Readonly<{
-    children: React.ReactNode;
-}>) {
+const inter = Inter({ subsets: ['latin'] });
+
+export default async function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html
             lang="en"
-            className={`dark`}
+            className={`dark ${inter.className}`}
             style={{colorScheme: "dark"}}
             suppressHydrationWarning={true}
         >
-        <body className={"p-0"}>
+        <body className={'min-h-screen flex flex-col'}>
+        {/*<MyThemeProvider>*/}
         {children}
+        {/*</MyThemeProvider>*/}
         </body>
         </html>
     );
