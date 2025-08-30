@@ -32,7 +32,7 @@ module.exports = {
                 primary: {
                     DEFAULT: 'var(--color-primary)',
                     light: 'var(--color-primary-light)',
-                    dark: 'var(--color-purple-light)',
+                    dark: 'var(--color-material-green-500)',
                 },
                 secondary: {
                     DEFAULT: 'var(--color-secondary)',
@@ -47,16 +47,26 @@ module.exports = {
                     light: 'var(--color-background-light)',
                     dark: 'var(--color-grey-near-black)',
                 },
+                header: {
+                    light: 'var(--color-card-light)',
+                    dark: 'var(--color-grey-absolute-black)',
+                    DEFAULT: 'var(--color-grey-absolute-black)',
+                },
+                footer: {
+                    light: 'var(--color-card-light)',
+                    dark: 'var(--color-grey-absolute-black)',
+                    DEFAULT: 'var(--color-grey-absolute-black)',
+                },
                 border: {
                     primary: {
                         light: 'var(--color-card-light)',
-                        dark: 'var(--color-grey-near-black-light)',
-                        DEFAULT: 'var(--color-aquatic-main)',
+                        dark: 'var(--color-grey-darker)',
+                        DEFAULT: 'var(--color-grey-darker)',
                     },
                     secondary: {
                         light: 'var(--color-grey-coal)',
-                        dark: 'var(--color-grey-coal)',
-                        DEFAULT: 'var(--color-grey-coal)',
+                        dark: 'var(--color-grey-darker)',
+                        DEFAULT: 'var(--color-grey-darker)',
                     },
                     hover: {
                         light: 'var(--color-card-light)',
@@ -70,8 +80,8 @@ module.exports = {
                     },
                     accent: {
                         light: 'var(--color-ocean-deep-shadow)',
-                        dark: 'var(--color-ocean-deep-shadow)',
-                        DEFAULT: 'var(--color-ocean-deep-shadow)',
+                        dark: 'var( --color-grey-darker)',
+                        DEFAULT: 'var( --color-grey-darker)',
                     },
                 },
                 text: {
@@ -81,7 +91,7 @@ module.exports = {
                     },
                     secondary: {
                         light: 'var(--color-text-secondary-light)',
-                        dark: 'var(--color-text-secondary-dark)',
+                        dark: 'var(--color-grey-darker)',
                     },
                 },
                 stroke: {
@@ -147,6 +157,11 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             keyframes: {
+                'cell-ripple': {
+                    '0%': {opacity: '0.4'},
+                    '50%': {opacity: '0.8'},
+                    '100%': {opacity: '0.4'},
+                },
                 'slide-in-from-right': {
                     '0%': {transform: 'translateX(100%)'},
                     '100%': {transform: 'translateX(0)'},
@@ -215,6 +230,11 @@ module.exports = {
                     '0%': {transform: 'translate(0%, 0%)', opacity: '1'},
                     '100%': {transform: 'translate(100%, 0%)', opacity: '0'},
                 },
+                scroll: {
+                    to: {
+                        transform: 'translate(calc(-50% - 0.5rem))',
+                    },
+                },
             },
             animation: {
                 'shimmer': "shimmer 2s linear infinite",
@@ -229,6 +249,8 @@ module.exports = {
                 'shine': 'shine linear infinite',
                 'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
                 'star-movement-top': 'star-movement-top linear infinite alternate',
+                'cell-ripple': 'cell-ripple var(--duration,200ms) ease-out var(--delay,0ms) 1',
+                'scroll': 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
             },
             fontFamily: {
                 poppins: [
@@ -240,7 +262,7 @@ module.exports = {
             fontSize: {
                 '4xl': '2.25rem', // 36px
                 '5xl': '3rem',    // 48px
-                '6xl': '6rem',    // 48px
+                '6xl': '4rem',    // 48px
                 '7xl': '6rem',    // 4
                 '8xl': '12rem',    //
                 '9xl': '16rem',

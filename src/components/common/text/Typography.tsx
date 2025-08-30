@@ -16,7 +16,7 @@ export const TypographyH1: React.FC<TypographyProps> = ({children, className}) =
 
 export const TypographyH2: React.FC<TypographyProps> = ({children, className}) => {
     return (
-        <h2 className={cn("scroll-m-20 border-b pb-2 text-4xl font-semibold tracking-tight first:mt-0", className)}>
+        <h2 className={cn("scroll-m-20 text-4xl font-semibold tracking-tight first:mt-0", className)}>
             {children}
         </h2>
     )

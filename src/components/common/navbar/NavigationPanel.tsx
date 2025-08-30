@@ -1,5 +1,5 @@
 import {NavigationButton} from "@/components/common/navbar/NavigationButton";
-import React from "react";
+import React, {useState} from "react";
 
 import {usePathname} from "next/navigation";
 
@@ -22,21 +22,27 @@ const masterBarRoutes = [
     }
 ]
 
-type NavigationPanel = {} & React.HTMLAttributes<HTMLElement>;
+type NavigationPanelProps = {} & React.HTMLAttributes<HTMLElement>;
 
-export const NavigationPanel: React.FC = () => {
+export const NavigationPanel: React.FC<NavigationPanelProps> = () => {
     const pathName = usePathname();
+    const [hovered, setHovered] = useState<string | null>(null)
 
     return (
         <div className={"flex justify-between items-center gap-1"}>
             {
-                masterBarRoutes.map((btn, i) => (
-                    <NavigationButton title={btn.title}
-                                      navigationPath={btn.navigationPath}
-                                      key={i}
-                                      className={pathName == btn.navigationPath ? "dark:bg-primary-dark text-black" : ""}
-                    />
-                ))
+                masterBarRoutes.map((btn, i) => {
+                        const highlightActive: boolean = pathName === btn.navigationPath && hovered === null;
+                        const highlightHover: boolean = hovered === btn.navigationPath;
+                        return <NavigationButton title={btn.title}
+                                                 navigationPath={btn.navigationPath}
+                                                 key={i}
+                                                 onMouseEnter={() => setHovered(btn.navigationPath)}
+                                                 onMouseLeave={() => setHovered(null)}
+                                                 className={(highlightActive || highlightHover) ? ("dark:bg-primary-dark dark:text-black " + (highlightHover ? " scale-105" : "")) : ""}
+                        />
+                    }
+                )
             }
         </div>
     )
