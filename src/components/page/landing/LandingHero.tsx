@@ -4,11 +4,10 @@ import {LandingHeroText} from "@/components/page/landing/LandingHeroText";
 import {AnimatedTestimonials} from "@/components/ui/animated-testimonials";
 import {NavigationButton} from "@/components/common/navbar/NavigationButton";
 import React from "react";
-import CardSwap, {Card} from "@/blocks/Components/CardSwap/CardSwap";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
-import {TypographyH1} from "@/components/common/text/Typography";
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
 import {AppleCardsCarouselDemo} from "@/components/page/landing/LandingHeroCarousel";
+import {cn} from "@/lib/utils";
 
 type LandingHeroProps = {
     className?: string;
@@ -45,7 +44,7 @@ export function AnimatedTestimonialsDemo() {
 
 export const LandingHero: React.FC<LandingHeroProps> = ({className}) => {
     return (
-        <div className={"w-full h-full flex justify-between items-start p-0"}>
+        <div className={cn("w-full h-full flex justify-between items-start p-0", className)}>
             <div className={"w-full flex flex-col items-start gap-8"}>
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                     <div className={"w-full h-auto flex justify-between items-center mt-12 px-16 py-4"}>

@@ -1,10 +1,7 @@
 import Masonry from "@/blocks/Components/Masonry/Masonry";
 
-type LandingImageGalleryProps = {
-    className?: string;
-}
 
-export const LandingImageGallery: React.FC<LandingImageGalleryProps> = (props) => {
+export const LandingImageGallery: React.FC = () => {
     const items = [
         {
             id: "1",

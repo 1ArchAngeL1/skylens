@@ -8,7 +8,7 @@ type TextLogoProps = {
     className?: string;
 } & React.HTMLAttributes<HTMLElement>
 
-export const TextLogo: React.FC<TextLogoProps> = ({className, children}) => {
+export const TextLogo: React.FC<TextLogoProps> = ({className}) => {
     const router = useRouter();
     return (
         <div onClick={() => {

@@ -5,13 +5,14 @@ import {SocialMediaIsland} from "@/components/common/navbar/SocialMediaIsland";
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
 import {FloatingMasterBar} from "@/components/common/navbar/FloatingMasterBar";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
+import {cn} from "@/lib/utils";
 
 type MainHeaderProps = {
     className?: string;
 }
 
 export const AppHeader: React.FC<MainHeaderProps> = ({className}) => {
-    return <div className={"w-full h-full flex items-center justify-between px-4"}>
+    return <div className={cn("w-full h-full flex items-center justify-between px-4", className)}>
         <AnimatedContent
             distance={-200}
             direction="horizontal"

@@ -1,5 +1,5 @@
 import {TypographyH1, TypographyH2} from "@/components/common/text/Typography";
-import TextType from "@/blocks/TextAnimations/TextType/TextType";
+import {cn} from "@/lib/utils";
 
 type LandingHeroTextProps = {
     className?: string;
@@ -7,10 +7,7 @@ type LandingHeroTextProps = {
 
 export const LandingHeroText: React.FC<LandingHeroTextProps> = ({className}) => {
 
-    return <div>
-        {/*<TypographyH2 className={"text-6xl"}>*/}
-        {/*    Your Sky. Your Story.*/}
-        {/*</TypographyH2>*/}
+    return <div className={cn("", className)}>
         <TypographyH1 className={"text-7xl text-start leading-none font-mono mb-4"}>
             Higher <br/> Perspective <br/> Awaits.
         </TypographyH1>

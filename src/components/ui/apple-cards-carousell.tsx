@@ -112,7 +112,6 @@ export const Carousel = ({items, initialScroll = 0}: CarouselProps) => {
                                         duration: 0.5,
                                         delay: 0.2 * index,
                                         ease: "easeOut",
-                                        once: true,
                                     },
                                 }}
                                 key={"card" + index}
@@ -155,7 +154,7 @@ export const Card = ({
 }) => {
     const [open, setOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-    const {onCardClose, currentIndex} = useContext(CarouselContext);
+    const {onCardClose} = useContext(CarouselContext);
 
     useEffect(() => {
         function onKeyDown(event: KeyboardEvent) {

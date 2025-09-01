@@ -8,11 +8,9 @@ import React from "react";
 import {AppHeader} from "@/components/common/header/AppHeader";
 import {LandingHero} from "@/components/page/landing/LandingHero";
 import {AppFooter} from "@/components/common/footer/AppFooter";
-import Image from "next/image";
 import {LandingImageGallery} from "@/components/page/landing/LandingImageGallery";
 import {ClientInfiniteScroll} from "@/components/page/landing/ClientsInfiniteScroll";
 import {NotWithUsSection} from "@/components/page/landing/NotWithUs";
-import PixelBlast from "@/blocks/Backgrounds/PixelBlast/PixelBlast";
 
 export default function LandingPage() {
     return (

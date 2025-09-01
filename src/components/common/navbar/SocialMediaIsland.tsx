@@ -1,5 +1,6 @@
 import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent";
-import {InstagramIcon, LinkedInIcon, YoutubeIcon, TikTokIcon} from "@/components/common/icons";
+import {InstagramIcon, LinkedInIcon, TikTokIcon, YoutubeIcon} from "@/components/common/icons";
+import {cn} from "@/lib/utils";
 
 type SocialMediaIslandProps = {
     className?: string;
@@ -19,7 +20,7 @@ export const SocialMediaIsland: React.FC<SocialMediaIslandProps> = ({className})
             scale={1}
             delay={0.1}
         >
-            <div className={"flex flex-row w-44 justify-center items-center gap-3"}>
+            <div className={cn("flex flex-row w-44 justify-center items-center gap-3", className)}>
                 <InstagramIcon width={28} height={28}
                                className={"transform transition-transform duration-100 ease-in-out hover:scale-110 hover:cursor-pointer"}/>
                 <LinkedInIcon width={28} height={28}
