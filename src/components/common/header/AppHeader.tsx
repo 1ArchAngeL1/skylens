@@ -45,7 +45,7 @@ export const AppHeader: React.FC<MainHeaderProps> = ({className}) => {
             >
                 <NavigationButton title={"Order Now"}
                                   navigationPath={"/order"}
-                                  className={"h-12 font-bold tracking-wide dark:bg-primary-dark text-black hover:dark:bg-white rounded-full duration-300 hover:scale-105"}
+                                  className={"h-12 font-bold tracking-wide dark:bg-primary-dark dark:text-black hover:dark:bg-white hover:text-black rounded-full duration-200 hover:scale-105"}
                 />
             </AnimatedContent>
 

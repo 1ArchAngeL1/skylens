@@ -167,4 +167,16 @@
                     var(--color-purple-medium-dark) 100%);
   }
 
+  .bg-radial-mint {
+    background: radial-gradient(
+                    circle,
+                    var(--color-grey-absolute-black) 5%,
+                    var(--color-grey-black) 20%,
+                    var(--color-grey-darker-black) 40%,
+                    var(--color-material-green-900) 70%,
+                    var(--color-material-green-800) 85%,
+                    var(--color-material-green-700) 100%
+    );
+  }
+
 }
