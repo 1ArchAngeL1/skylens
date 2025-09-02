@@ -3,7 +3,7 @@ import React, {createContext, JSX, useContext, useEffect, useRef, useState,} fro
 import {IconArrowNarrowLeft, IconArrowNarrowRight, IconX,} from "@tabler/icons-react";
 import {cn} from "@/lib/utils";
 import {AnimatePresence, motion} from "motion/react";
-import {ImageProps} from "next/image";
+import Image, {ImageProps} from "next/image";
 import {useOutsideClick} from "@/lib/hooks/use-outside-click";
 
 interface CarouselProps {
@@ -228,7 +228,7 @@ export const Card = ({
             </AnimatePresence>
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
-                onClick={handleOpen}
+                onClick={() => {}}
                 className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900"
             >
                 <div
@@ -268,7 +268,7 @@ export const BlurImage = ({
                           }: ImageProps) => {
     const [isLoading, setLoading] = useState(true);
     return (
-        <img
+        <Image
             className={cn(
                 "h-full w-full transition duration-300",
                 isLoading ? "blur-sm" : "blur-0",

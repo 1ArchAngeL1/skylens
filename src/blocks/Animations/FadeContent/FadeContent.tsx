@@ -1,6 +1,4 @@
-/*
-	Installed from https://reactbits.dev/ts/tailwind/
-*/
+'use client'
 
 import { useRef, useEffect, useState, ReactNode } from "react";
 

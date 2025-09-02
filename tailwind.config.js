@@ -45,7 +45,7 @@ module.exports = {
                 },
                 surface: {
                     light: 'var(--color-background-light)',
-                    dark: 'var(--color-grey-near-black)',
+                    dark: 'var(--color-grey-absolute-black)',
                 },
                 header: {
                     light: 'var(--color-card-light)',

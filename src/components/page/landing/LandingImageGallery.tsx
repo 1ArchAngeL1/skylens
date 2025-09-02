@@ -7,7 +7,7 @@ export const LandingImageGallery: React.FC = () => {
             id: "1",
             img: "/landing/tbilisi_view1.jpg",
             url: "/landing/tbilisi_view1.jpg",
-            height: 400,
+            height: 250,
         },
         {
             id: "2",
@@ -19,25 +19,25 @@ export const LandingImageGallery: React.FC = () => {
             id: "3",
             img: "/landing/tbilisi_view3.jpg",
             url: "/landing/tbilisi_view3.jpg",
-            height: 400,
+            height: 250,
         },
         {
             id: "4",
             img: "/landing/tbilisi_view4.jpg",
             url: "/landing/tbilisi_view4.jpg",
-            height: 400,
+            height: 600,
         },
         {
             id: "5",
             img: "/landing/tbilisi_view5.webp",
             url: "/landing/tbilisi_view5.webp",
-            height: 400,
+            height: 250,
         },
         {
             id: "6",
             img: "/landing/tbilisi_view6.jpg",
             url: "/landing/tbilisi_view6.jpg",
-            height: 550,
+            height: 600,
         },
         {
             id: "7",
@@ -49,13 +49,13 @@ export const LandingImageGallery: React.FC = () => {
             id: "8",
             img: "/landing/tbilisi_view9.webp",
             url: "/landing/tbilisi_view9.webp",
-            height: 600,
+            height: 450,
         },
         {
             id: "9",
             img: "/landing/tbilisi_view10.jpg",
             url: "/landing/tbilisi_view10.jpg",
-            height: 400,
+            height: 450,
         },
         {
             id: "10",
@@ -67,6 +67,18 @@ export const LandingImageGallery: React.FC = () => {
             id: "11",
             img: "/landing/tbilisi_view13.jpg",
             url: "/landing/tbilisi_view13.jpg",
+            height: 250,
+        },
+        {
+            id: "12",
+            img: "/landing/tbilisi_view6.jpg",
+            url: "/landing/tbilisi_view6.jpg",
+            height: 250,
+        },
+        {
+            id: "13",
+            img: "/landing/tbilisi_view7.jpg",
+            url: "/landing/tbilisi_view7.jpg",
             height: 250,
         },
     ];

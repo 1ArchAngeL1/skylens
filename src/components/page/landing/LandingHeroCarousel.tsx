@@ -10,7 +10,7 @@ export function AppleCardsCarouselDemo() {
     ));
 
     return (
-        <div className="w-full h-[400px]">
+        <div className="w-[840px] h-[800px] opacity-80">
             <Carousel items={cards}/>
         </div>
     );

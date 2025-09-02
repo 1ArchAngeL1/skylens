@@ -3,6 +3,11 @@ import "./global.scss";
 import React from "react";
 import {Inter} from 'next/font/google';
 import MyThemeProvider from "@/components/common/provider/MyThemeProvider";
+import {Header} from "@/components/Header";
+import {AppHeader} from "@/components/common/header/AppHeader";
+import BodyContent from "@/components/BodyContent";
+import {Footer} from "@/components/Footer";
+import {AppFooter} from "@/components/common/footer/AppFooter";
 
 export const metadata: Metadata = {
     title: "skylens",
@@ -21,7 +26,15 @@ export default async function RootLayout({children}: { children: React.ReactNode
         >
         <body className={'dark min-h-screen flex flex-col overflow-x-hidden'}>
         <MyThemeProvider>
-            {children}
+            <Header className={"rounded-b-[16px] shadow-2xl border-b dark:border-border-primary-dark"}>
+                <AppHeader/>
+            </Header>
+            <BodyContent className={"relative w-full flex-1 flex flex-col gap-4 items-center z-10"}>
+                {children}
+            </BodyContent>
+            <Footer className={"rounded-t-[16px] shadow-2xl border-t dark:border-border-primary-dark"}>
+                <AppFooter/>
+            </Footer>
         </MyThemeProvider>
         </body>
         </html>
