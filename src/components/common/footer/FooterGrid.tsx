@@ -14,7 +14,7 @@ export const FooterGrid: React.FC<FooterGridProps> = ({className}) => {
     return (
         <div
             className={cn(
-                "w-full p-8 pb-0 mx-auto grid grid-cols-6 gap-1",
+                "w-full p-4 mx-auto grid grid-cols-6 gap-1",
                 className
             )}
         >

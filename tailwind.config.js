@@ -141,7 +141,11 @@ module.exports = {
                     DEFAULT: 'var(--destructive)',
                     foreground: 'var(--destructive-foreground)',
                 },
-                input: 'var(--color-primary-dark)',
+                input: {
+                    DEFAULT: 'var(--color-grey-dark)',
+                    light: 'var(--color-grey-dark)',
+                    dark: 'var(--color-grey-dark)',
+                },
                 ring: 'var(--color-primary-dark)',
                 chart: {
                     '1': 'var(--chart-1)',

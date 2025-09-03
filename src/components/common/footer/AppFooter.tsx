@@ -8,7 +8,7 @@ type AppFooterProps = {
 }
 
 export const AppFooter: React.FC<AppFooterProps> = ({className}) => {
-    return <div className={cn("w-full flex flex-col", className)}>
+    return <div className={cn("w-full flex flex-col justify-center items-center p-4", className)}>
         <FooterGrid/>
         <FooterOfficial/>
     </div>
