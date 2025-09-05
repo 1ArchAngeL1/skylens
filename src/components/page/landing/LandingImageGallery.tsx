@@ -1,3 +1,5 @@
+'use client'
+
 import Masonry from "@/blocks/Components/Masonry/Masonry";
 
 

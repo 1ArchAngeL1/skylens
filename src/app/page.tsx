@@ -1,5 +1,3 @@
-'use client'
-
 import {BackgroundRippleEffect} from "@/components/ui/background-ripple-effect";
 import React from "react";
 import {LandingHero} from "@/components/page/landing/LandingHero";

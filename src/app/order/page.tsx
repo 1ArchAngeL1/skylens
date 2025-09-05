@@ -22,6 +22,6 @@ export default function OrderPage() {
             <div className={"flex flex-col justify-center items-center gap-3 bg-surface-light dark:bg-surface-dark z-[100] rounded-3xl p-8 opacity-95 my-40"}>
                 <OrderForm/>
             </div>
-        </div>
+        </>
     );
 }
