@@ -1,5 +1,3 @@
-'use client'
-
 import {LandingHeroText} from "@/components/page/landing/LandingHeroText";
 import {AnimatedTestimonials} from "@/components/ui/animated-testimonials";
 import {NavigationButton} from "@/components/common/navbar/NavigationButton";

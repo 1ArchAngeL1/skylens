@@ -29,7 +29,7 @@ export default async function RootLayout({children}: { children: React.ReactNode
             <Header className={"rounded-b-[16px] shadow-2xl border-b dark:border-border-primary-dark"}>
                 <AppHeader/>
             </Header>
-            <BodyContent className={"relative w-full flex-1 flex flex-col gap-4 items-center z-10"}>
+            <BodyContent className={"relative flex-1 flex flex-col justify-center items-center z-10"}>
                 {children}
             </BodyContent>
             <Footer className={"rounded-t-[16px] shadow-2xl border-t dark:border-border-primary-dark"}>
