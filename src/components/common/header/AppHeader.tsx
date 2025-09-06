@@ -6,6 +6,9 @@ import AnimatedContent from "@/blocks/Animations/AnimatedContent/AnimatedContent
 import {FloatingMasterBar} from "@/components/common/navbar/FloatingMasterBar";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import {cn} from "@/lib/utils";
+import {Dialog, DialogContent, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {TypographyH3} from "@/components/common/text/Typography";
+import {OrderModalForm} from "@/components/page/order/OrderModalForm";
 
 type MainHeaderProps = {
     className?: string;
@@ -44,10 +47,29 @@ export const AppHeader: React.FC<MainHeaderProps> = ({className}) => {
                 threshold={0}
                 delay={0.1}
             >
-                <NavigationButton title={"Order Now"}
-                                  navigationPath={"/order"}
-                                  className={"h-12 font-bold tracking-wide dark:bg-primary-dark dark:text-black hover:dark:bg-white hover:text-black rounded-full duration-200 hover:scale-105"}
-                />
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <NavigationButton title={"Order Now"}
+                                          navigationPath={"/order"}
+                                          className={"h-12 font-bold tracking-wide dark:bg-primary-dark dark:text-black hover:dark:bg-white hover:text-black rounded-full duration-200 hover:scale-105"}
+                        />
+                    </DialogTrigger>
+                    <DialogContent className={"p-8"}>
+                        <DialogTitle className={"my-6"}>
+                            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}
+                                         className={"overflow-hidden"}>
+                                <TypographyH3 className={"text-4xl font-mono dark:text-primary-dark text-center"}>
+                                    Join Our Community
+                                </TypographyH3>
+                            </FadeContent>
+                        </DialogTitle>
+                        <div className={"flex"}>
+                            <OrderModalForm/>
+                        </div>
+
+                    </DialogContent>
+                </Dialog>
+
             </AnimatedContent>
 
         </div>

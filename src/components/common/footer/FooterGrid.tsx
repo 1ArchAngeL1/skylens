@@ -12,13 +12,8 @@ type FooterGridProps = {
 
 export const FooterGrid: React.FC<FooterGridProps> = ({className}) => {
     return (
-        <div
-            className={cn(
-                "w-full p-4 mx-auto grid grid-cols-6 gap-1",
-                className
-            )}
-        >
-            <div className="flex flex-col justify-start items-start gap-3">
+        <div className={"w-full h-full flex justify-between p-4 flex-1"}>
+            <div className="flex flex-col justify-start items-start gap-2 mr-8">
                 <TextLogo className="text-3xl z-10"/>
                 <div className={"text text-text-secondary-light dark:text-text-secondary-dark dark:text-gray-300"}>
                     <Separator className={"bg-border-secondary-light dark:bg-border-secondary-dark mb-2"}/>
@@ -32,111 +27,115 @@ export const FooterGrid: React.FC<FooterGridProps> = ({className}) => {
                     </div>
                 </div>
             </div>
+            <div className={"px-12 mx-auto grid grid-cols-4 flex-1"}>
+                <div>
+                    <h3 className="text-white text-xl font-semibold mb-3 dark:text-primary-dark">Company</h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Careers
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Press
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Blog
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3 className="text-white font-semibold mb-4 dark:text-primary-dark">Company</h3>
-                <ul className="space-y-4">
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            About Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Careers
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Press
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Blog
-                        </Link>
-                    </li>
-                </ul>
+                <div>
+                    <h3 className="text-white text-xl font-semibold mb-3 dark:text-primary-dark">Support</h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Help Center
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                FAQs
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                System Status
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 className="text-white text-xl font-semibold mb-3 dark:text-primary-dark">Legal</h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Privacy Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Terms of Service
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Cookie Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Security
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 className="text-white text-xl font-semibold mb-3 dark:text-primary-dark">Follow Us</h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Twitter
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Facebook
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                LinkedIn
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-white transition">
+                                Instagram
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className={""}>
+                <GoogleMap/>
             </div>
 
-            <div>
-                <h3 className="text-white font-semibold mb-4 dark:text-primary-dark">Support</h3>
-                <ul className="space-y-4">
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Help Center
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Contact Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            FAQs
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            System Status
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 className="text-white font-semibold mb-4 dark:text-primary-dark">Legal</h3>
-                <ul className="space-y-4">
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Privacy Policy
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Terms of Service
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Cookie Policy
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Security
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 className="text-white font-semibold mb-4 dark:text-primary-dark">Follow Us</h3>
-                <ul className="space-y-4">
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Twitter
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Facebook
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            LinkedIn
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="hover:text-white transition">
-                            Instagram
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-            <GoogleMap/>
         </div>
     );
 };

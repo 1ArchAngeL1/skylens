@@ -1,15 +1,11 @@
-'use client'
-
 import React from "react";
 import GridDistortion from "@/blocks/Backgrounds/GridDistortion/GridDistortion";
 import 'react-international-phone/style.css';
-import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
-import {TypographyH3} from "@/components/common/text/Typography";
 import {OrderForm} from "@/components/page/order/OrderForm";
 
 export default function OrderPage() {
     return (
-        <div className={"relative flex w-full flex-col justify-center items-center z-[100]"}>
+        <>
             <div className={"absolute inset-0"}>
                 <GridDistortion
                     imageSrc="/wallpaper/wallpaper.png"
@@ -19,7 +15,8 @@ export default function OrderPage() {
                     relaxation={0.9}
                 />
             </div>
-            <div className={"flex flex-col justify-center items-center gap-3 bg-surface-light dark:bg-surface-dark z-[100] rounded-3xl p-8 opacity-95 my-40"}>
+            <div
+                className={"flex flex-col justify-center items-center gap-3 bg-surface-light dark:bg-surface-dark z-[100] rounded-3xl p-8 opacity-95 my-40"}>
                 <OrderForm/>
             </div>
         </>

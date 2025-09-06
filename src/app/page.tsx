@@ -4,10 +4,11 @@ import {LandingHero} from "@/components/page/landing/LandingHero";
 import {LandingImageGallery} from "@/components/page/landing/LandingImageGallery";
 import {ClientInfiniteScroll} from "@/components/page/landing/ClientsInfiniteScroll";
 import {NotWithUsSection} from "@/components/page/landing/NotWithUs";
+import {LandingOrder} from "@/components/page/landing/LandingOrder";
 
 export default function LandingPage() {
     return (
-        <>
+        <div className={"w-full h-full flex flex-col items-center"}>
             <div className={"relative w-full h-[800px] overflow-hidden"}>
                 <BackgroundRippleEffect rows={20} cellSize={100} className={"opacity-15 shadow-2xl"}/>
                 <LandingHero/>
@@ -17,7 +18,10 @@ export default function LandingPage() {
                 <LandingImageGallery/>
             </div>
             <ClientInfiniteScroll/>
+            <div className={"w-full flex justify-center"}>
+                <LandingOrder/>
+            </div>
             <NotWithUsSection/>
-        </>
+        </div>
     );
 }

@@ -26,13 +26,13 @@ export default async function RootLayout({children}: { children: React.ReactNode
         >
         <body className={'dark min-h-screen flex flex-col overflow-x-hidden'}>
         <MyThemeProvider>
-            <Header className={"rounded-b-[16px] shadow-2xl border-b dark:border-border-primary-dark"}>
+            <Header>
                 <AppHeader/>
             </Header>
             <BodyContent className={"relative flex-1 flex flex-col justify-center items-center z-10"}>
                 {children}
             </BodyContent>
-            <Footer className={"rounded-t-[16px] shadow-2xl border-t dark:border-border-primary-dark"}>
+            <Footer>
                 <AppFooter/>
             </Footer>
         </MyThemeProvider>

@@ -1,5 +1,6 @@
 'use client'
 
+import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {PhoneInput} from "@/components/ui/phone-input";
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
@@ -7,6 +8,7 @@ import {Button} from "@/components/ui/button";
 import React, {useState} from "react";
 import {addDoc, collection} from "firebase/firestore";
 import {db} from "@/firebase";
+import {TypographyH3} from "@/components/common/text/Typography";
 import {OrderInput} from "@/components/page/order/OrderInput";
 
 
@@ -34,15 +36,14 @@ async function addContactInformation(info?: contacftInformation) {
     }
 }
 
-
 type OrderFormProps = {
     className?: string;
 }
 
-export const OrderForm: React.FC<OrderFormProps> = ({className}) => {
+export const OrderModalForm: React.FC<OrderFormProps> = ({className}) => {
     const [phone, setPhone] = useState<string>('');
 
-    return <div className={"flex flex-col justify-center items-center gap-6 p-8 opacity-100 z-[200]"}>
+    return <div className={"flex flex-col justify-center items-center gap-6 w-auto px-4 opacity-100"}>
         <div className={"flex flex-col justify-center items-center gap-3"}>
             <OrderInput type={"text"} placeHolder="first Name"/>
             <OrderInput type={"text"} placeHolder="Last Name"/>

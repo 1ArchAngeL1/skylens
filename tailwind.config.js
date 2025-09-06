@@ -40,8 +40,8 @@ module.exports = {
                     dark: 'var(--color-secondary-dark)',
                 },
                 background: {
-                    light: 'var(--color-background-light)',
-                    dark: 'var(--color-gray-7)',
+                    light: 'var(--color-grey-near-black)',
+                    dark: 'var(--color-grey-near-black)',
                 },
                 surface: {
                     light: 'var(--color-background-light)',
@@ -254,7 +254,7 @@ module.exports = {
                 'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
                 'star-movement-top': 'star-movement-top linear infinite alternate',
                 'cell-ripple': 'cell-ripple var(--duration,200ms) ease-out var(--delay,0ms) 1',
-                'scroll': 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+                'scroll': 'scroll var(--animation-duration, 60s) var(--animation-direction, forwards) linear infinite',
             },
             fontFamily: {
                 poppins: [

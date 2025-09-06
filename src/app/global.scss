@@ -46,6 +46,7 @@
 
   :root {
 
+    --animation-duration: 5s;
     /* Light to medium greys */
     --color-grey-lightest: #9e9e9e;
     --color-grey-lighter: #8e8e8e;
@@ -178,5 +179,17 @@
                     var(--color-material-green-700) 100%
     );
   }
+
+  .gradient-light {
+    background: radial-gradient(
+                    circle,
+                    var(--color-material-green-400) 0%,
+                    var(--color-material-green-600) 60%,
+                    transparent 50%
+    );
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+
 
 }
