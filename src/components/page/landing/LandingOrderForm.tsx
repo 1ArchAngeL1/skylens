@@ -44,15 +44,15 @@ export const LandingOrderForm: React.FC<LandingOrderFormProps> = ({className}) =
         <div className={"flex w-full h-full items-center gap-3"}>
             <div className={"flex flex-col w-full h-full justify-center items-center gap-3"}>
                 <OrderInput type={"text"} placeHolder="first Name" className={"h-14"}/>
-                <OrderInput type={"text"} placeHolder="Last Name" className={"h-14"}/>
-                <OrderInput type={"email"} placeHolder="Email" className={"h-14"}/>
-                <OrderInput type={"text"} placeHolder="Company name(optional)" className={"h-14"}/>
+                <OrderInput type={"text"} placeHolder="last Name" className={"h-14"}/>
+                <OrderInput type={"email"} placeHolder="email" className={"h-14"}/>
+                <OrderInput type={"text"} placeHolder="company name(optional)" className={"h-14"}/>
                 <PhoneInput defaultCountry={"GE"}
                             className={"w-full [&_*]:dark:border-border-primary-dark [&_*]:dark:bg-input-dark"}/>
             </div>
             <div className={"flex flex-col w-full h-full justify-center items-center gap-3"}>
                 <Textarea
-                    className={"w-full h-full rounded-2xl border dark:border-border-primary-dark dark:bg-input-dark " +
+                    className={"w-full h-full rounded-2xl border dark:border-border-primary-dark dark:bg-input-dark placeholder:font-semibold " +
                         "focus:border-primary transition-transform duration-300"}
                     placeholder={"description"}
                 />

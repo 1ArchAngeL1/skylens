@@ -40,7 +40,8 @@ export function AnimatedTestimonialsDemo() {
 
 export const LandingOrder: React.FC<LandingOrderProps> = props => {
     return (
-        <div className={"flex flex-col w-full"}>
+        <div className={"relative flex flex-col w-full"}>
+            <div className={"absolute gradient-light top-0 left-1/2 transform -translate-x-1/2 opacity-40"}/>
             <div className={"w-full flex justify-center items-center"}>
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                     <TypographyH1 className={"tracking-wide"}>Not With Us Yet?!</TypographyH1>
@@ -48,7 +49,7 @@ export const LandingOrder: React.FC<LandingOrderProps> = props => {
             </div>
             <div
                 className={"relative w-full flex justify-between items-start gap-6 z-[100] opacity-95 overflow-hidden px-8 py-4"}>
-                <BackgroundRippleEffect rows={10} cellSize={100} className={"opacity-20 shadow-2xl"}/>
+                <BackgroundRippleEffect rows={5} cellSize={100} className={"opacity-20 shadow-2xl"}/>
                 <AnimatedTestimonialsDemo/>
                 <LandingOrderForm/>
             </div>

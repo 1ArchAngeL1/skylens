@@ -14,10 +14,10 @@ export const TextLogo: React.FC<TextLogoProps> = ({className}) => {
     return (
         <div onClick={() => {
             router.push("/");
-        }} className={"cursor-pointer"}>
+        }} className={"flex justify-center items-start cursor-pointer"}>
             <TypographyH2 className={cn("select-none", className)}>
                 <span className={"p-0 m-0"}>TSIS</span>
-                <LogoImage/>
+                <LogoImage className={"relative bottom-1"}/>
                 <span className={"dark:text-primary-dark"}>TVALI</span>
             </TypographyH2>
         </div>
