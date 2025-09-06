@@ -3,6 +3,7 @@ import * as React from "react";
 import {TypographyH2} from "@/components/common/text/Typography";
 import {cn} from "@/lib/utils";
 import {useRouter} from "next/navigation";
+import {LogoImage} from "@/components/common/LogoImage";
 
 type TextLogoProps = {
     className?: string;
@@ -15,7 +16,9 @@ export const TextLogo: React.FC<TextLogoProps> = ({className}) => {
             router.push("/");
         }} className={"cursor-pointer"}>
             <TypographyH2 className={cn("select-none", className)}>
-                TSIS<span className={"dark:text-primary-dark"}>TVALI</span>
+                <span className={"p-0 m-0"}>TSIS</span>
+                <LogoImage/>
+                <span className={"dark:text-primary-dark"}>TVALI</span>
             </TypographyH2>
         </div>
 

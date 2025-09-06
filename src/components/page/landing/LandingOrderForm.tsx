@@ -40,30 +40,35 @@ type LandingOrderFormProps = {
 }
 
 export const LandingOrderForm: React.FC<LandingOrderFormProps> = ({className}) => {
-    return <div className={"flex flex-col justify-center items-center gap-6 p-12 bg-transparent z-[200]"}>
-        <div className={"flex flex-col justify-center items-center gap-3"}>
-            <OrderInput type={"text"} placeHolder="first Name" className={"h-14"}/>
-            <OrderInput type={"text"} placeHolder="Last Name" className={"h-14"}/>
-            <OrderInput type={"email"} placeHolder="Email" className={"h-14"}/>
-            <OrderInput type={"text"} placeHolder="Company name(optional)" className={"h-14"}/>
-            <Textarea
-                className={"w-full rounded-2xl border dark:border-border-primary-dark dark:bg-input-dark " +
-                    "focus:border-primary transition-transform duration-300 h-20"}
-                placeholder={"description"}
-            />
-            <div className={"w-full flex justify-between gap-3 p-0"}>
+    return <div className={"flex flex-col w-full h-full justify-center items-center gap-6 p-2 bg-transparent z-[200]"}>
+        <div className={"flex w-full h-full items-center gap-3"}>
+            <div className={"flex flex-col w-full h-full justify-center items-center gap-3"}>
+                <OrderInput type={"text"} placeHolder="first Name" className={"h-14"}/>
+                <OrderInput type={"text"} placeHolder="Last Name" className={"h-14"}/>
+                <OrderInput type={"email"} placeHolder="Email" className={"h-14"}/>
+                <OrderInput type={"text"} placeHolder="Company name(optional)" className={"h-14"}/>
                 <PhoneInput defaultCountry={"GE"}
                             className={"w-full [&_*]:dark:border-border-primary-dark [&_*]:dark:bg-input-dark"}/>
-                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                    <Button
-                        className={"w-28 h-10 text-xl rounded-2xl bg-primary-light dark:bg-primary-dark text-black font-bold hover:cursor-pointer hover:scale-105 mr-2 transition-transform duration-300 ease-out"}
-                        onClick={() => {
-                            addContactInformation();
-                        }}>
-                        Confirm
-                    </Button>
-                </FadeContent>
             </div>
+            <div className={"flex flex-col w-full h-full justify-center items-center gap-3"}>
+                <Textarea
+                    className={"w-full h-full rounded-2xl border dark:border-border-primary-dark dark:bg-input-dark " +
+                        "focus:border-primary transition-transform duration-300"}
+                    placeholder={"description"}
+                />
+            </div>
+        </div>
+        <div className={"w-full flex justify-end gap-3 p-0"}>
+
+            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                <Button
+                    className={"w-28 h-14 text-xl rounded-2xl bg-primary-light dark:bg-primary-dark text-black font-bold hover:cursor-pointer hover:scale-105 mr-2 transition-transform duration-300 ease-out"}
+                    onClick={() => {
+                        addContactInformation();
+                    }}>
+                    Confirm
+                </Button>
+            </FadeContent>
         </div>
     </div>
 }

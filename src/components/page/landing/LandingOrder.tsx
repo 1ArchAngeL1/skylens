@@ -2,6 +2,8 @@ import React from "react";
 import {BackgroundRippleEffect} from "@/components/ui/background-ripple-effect";
 import {LandingOrderForm} from "@/components/page/landing/LandingOrderForm";
 import {AnimatedTestimonials} from "@/components/ui/animated-testimonials";
+import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
+import {TypographyH1} from "@/components/common/text/Typography";
 
 type LandingOrderProps = {
     className?: string;
@@ -38,10 +40,18 @@ export function AnimatedTestimonialsDemo() {
 
 export const LandingOrder: React.FC<LandingOrderProps> = props => {
     return (
-        <div className={"relative w-full flex justify-between items-center gap-3 z-[100] opacity-95 overflow-hidden px-20"}>
-            <BackgroundRippleEffect rows={10} cellSize={100} className={"opacity-15 shadow-2xl"}/>
-            <AnimatedTestimonialsDemo/>
-            <LandingOrderForm/>
+        <div className={"flex flex-col w-full"}>
+            <div className={"w-full flex justify-center items-center"}>
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                    <TypographyH1 className={"tracking-wide"}>Not With Us Yet?!</TypographyH1>
+                </FadeContent>
+            </div>
+            <div
+                className={"relative w-full flex justify-between items-start gap-6 z-[100] opacity-95 overflow-hidden px-8 py-4"}>
+                <BackgroundRippleEffect rows={10} cellSize={100} className={"opacity-20 shadow-2xl"}/>
+                <AnimatedTestimonialsDemo/>
+                <LandingOrderForm/>
+            </div>
         </div>
     );
 }

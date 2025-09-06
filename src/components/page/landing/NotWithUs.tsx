@@ -14,7 +14,7 @@ export const NotWithUsSection: React.FC<NotWithUsSectionProps> = ({className}) =
         <div className={cn('relative w-full flex flex-col items-center justify-center gap-4 py-20 overflow-hidden', className)}>
             <div className={"absolute w-[250px] h-[250px] gradient-light left-0 top-0 transform -translate-y-1/2 -translate-x-1/2"}/>
             <div className={"absolute w-[250px] h-[250px] gradient-light right-0 bottom-0 transform translate-y-1/2 translate-x-1/2 "}/>
-
+            <div className={"absolute w-[250px] h-[250px] gradient-light right-1/2 bottom-1/2 transform translate-y-1/2 translate-x-1/2 opacity-40"}/>
             <div className={"w-full flex justify-center items-center"}>
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                     <TypographyH1 className={"tracking-wide"}>Not With Us Yet?!</TypographyH1>

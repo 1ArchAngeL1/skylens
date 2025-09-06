@@ -9,7 +9,7 @@ export const MainRadialGradient = ({className}: MainRadialGradientProps) => {
     return (
         <div
             className={cn(
-                'absolute rounded-full bg-radial-mint opacity-40 pointer-events-none blur-md transform', className
+                'absolute rounded-full gradient-light opacity-40 pointer-events-none blur-md transform', className
             )}
         />
     );

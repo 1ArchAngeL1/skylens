@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {IconArrowLeft, IconArrowRight} from "@tabler/icons-react";
 import {AnimatePresence, motion} from "motion/react";
@@ -53,10 +53,10 @@ export const AnimatedTestimonials = ({
                                 <motion.div
                                     key={testimonial.src}
                                     initial={{
-                                        opacity: 0,
+                                        opacity: "0",
                                         scale: 0.9,
                                         z: -100,
-                                        rotate: randomRotateY(),
+                                        rotate: 3,
                                     }}
                                     animate={{
                                         opacity: isActive(index) ? 1 : 0.7,
